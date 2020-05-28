@@ -1,0 +1,218 @@
+# menu
+menu:
+  Home: .
+  Archives: archives  # 归档
+  Categories: categories  # 分类
+  Tags: tags  # 标签
+  Repository: https://github.com/fuyuaaa  # github repositories
+
+# Enable/Disable menu icons
+menu_icons:
+  enable: true  # 是否启用导航菜单图标
+  home: icon-home-fill
+  archives: icon-archives-fill
+  categories: icon-folder
+  tags: icon-tags
+  repository: icon-project
+  books: icon-book-fill
+  links: icon-friendship
+  about: icon-cup-fill
+
+# rss
+rss: /atom.xml
+
+# Site
+site:
+  logo:
+    enabled: true
+    width: 40
+    height: 40
+    url: ../images/avatar.png
+  title: fuyuaaa # 页面title
+  favicon: /favicon.png
+  board: <p>敲代码不如跳舞💃!</p> # 站点公告
+  copyright: true # 底部版权信息
+
+# config
+config:
+  skin: # 主题颜色 theme-black theme-blue theme-green theme-purple
+  layout: main-center # 布局方式 main-left main-center main-right
+  toc: true # 是否开启文章章节目录导航
+  menu_highlight: false # 是否开启当前菜单高亮显示
+  thumbnail: false # enable posts thumbnail, options: true, false
+  excerpt_link: Read More
+
+# Pagination
+pagination:
+  number: true
+  prev: 
+    alwayShow: true
+  next:
+    alwayShow: true
+
+# Sidebar
+sidebar: right
+widgets:
+  - board  
+  - category
+  - tag
+  - tagcloud
+  - archive
+  - recent_posts
+
+# display widgets at the bottom of index pages (pagination == 2)
+index_widgets:
+# - category
+# - tagcloud
+# - archive  
+
+# widget behavior
+archive_type: 'monthly'
+show_count: true
+
+# Fancybox
+fancybox: false
+
+# Search
+search:
+  insight: true # you need to install `hexo-generator-json-content` before using Insight Search
+  baidu: false # you need to disable other search engines to use Baidu search
+
+# Donate
+donate:
+  enable: false
+  # 微信打赏
+  wechatpay:
+    qrcode: images/donate/wechatpayimg.png
+    title: 微信支付
+  # 支付宝打赏
+  alipay: 
+    qrcode: images/donate/alipayimg.png 
+    title: 支付宝
+
+# Share
+# weibo,qq,qzone,wechat,tencent,douban,diandian,facebook,twitter,google,linkedin
+share:
+  enable: true  # 是否启用分享
+  sites: weibo,qq,wechat  # PC端显示的分享图标
+  mobile_sites: weibo,qq,qzone  # 移动端显示的分享图标
+
+# Github
+github: 
+  username: fuyuaaa  # github username
+
+# Comment
+# Gitment
+# Introduction: https://imsun.net/posts/gitment-introduction/
+comment:
+  type:   # 启用哪种评论系统
+  disqus:  # enter disqus shortname here
+  youyan: 
+    uid: 1783844 # enter youyan uid 
+  livere:
+    uid: # enter youyan uid 
+  gitment:
+    githubID: 
+    repo: 
+    ClientID: 
+    ClientSecret: 
+    lazy: false
+  gitalk: # gitalk. https://gitalk.github.io/
+    owner:  #必须. GitHub repository 所有者，可以是个人或者组织。
+    admin:  #必须. GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)。
+    repo:  #必须. GitHub repository.
+    ClientID:  #必须. GitHub Application Client ID.
+    ClientSecret:  #必须. GitHub Application Client Secret.
+  valine: # Valine. https://valine.js.org
+    appid:  # your leancloud application appid
+    appkey:  # your leancloud application appkey
+    notify: false # mail notifier , https://github.com/xCss/Valine/wiki
+    verify: false # Verification code
+    placeholder: Just go go # comment box placeholder
+    avatar: mm # gravatar style
+    meta: nick,mail,link # custom comment header
+    pageSize: 10 # pagination size
+    visitor: false # Article reading statistic https://valine.js.org/visitor.html
+
+# douban 豆瓣书单
+# Api：
+  # https://developers.douban.com/wiki/?title=book_v2 图书
+  # https://developers.douban.com/wiki/?title=movie_v2 电影
+# books：
+  # https://api.douban.com/v2/book/user/:name/collections?start=0&count=100 个人书单列表
+# movies:
+  # https://api.douban.com/v2/movie/in_theaters 正在上映的电影
+  # https://api.douban.com/v2/movie/coming_soon 即将上映的电影
+  # https://api.douban.com/v2/movie/subject/:id 单个电影信息
+  # https://api.douban.com/v2/movie/search?q={text} 电影搜索
+douban:
+  user: # 豆瓣用户名
+  start: 0 # 从哪一条记录开始
+  count: 100 # 获取豆瓣书单数据条数
+  
+# PV
+pv:
+  busuanzi:
+    enable: true  # 不蒜子统计
+  leancloud:
+    enable: false  # leancloud统计
+    app_id: # leancloud <AppID>
+    app_key: # leancloud <AppKey>
+        
+# wordcount
+postCount:
+  enable: false
+  wordcount: true  # 文章字数统计
+  min2read: true  # 阅读时长预计 
+
+# Plugins
+plugins:
+  google_analytics: # enter the tracking ID for your Google Analytics
+  google_site_verification: # enter Google site verification code
+  baidu_analytics: # enter Baidu Analytics hash key
+  tencent_analytics: 
+  
+# Miscellaneous
+twitter:
+google_plus:
+fb_admins:
+fb_app_id:  
+  
+# profile
+profile:
+  enabled: true # Whether to show profile bar
+  avatar: images/avatar.png
+  gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
+  author: fuyuaaa
+  author_title: dancer
+  author_description: 敲代码不如跳舞💃!
+  location: hangzhou, China
+  follow: https://github.com/fuyuaaa
+  # Social Links
+  social:
+    links:
+      github: https://github.com/fuyuaaa
+      rss: atom.xml
+    link_tooltip: true # enable the social link tooltip, options: true, false
+  # My Skills 
+  skills:
+    code: ☆☆☆☆☆
+    dance: ★★★★★
+  # My Personal Links
+  links:
+    Github: https://github.com/fuyuaaa
+    Blog: http://fuyuaaa.top
+    Behance: https://www.behance.net/cofess
+  # My Personal Labels
+  labels:
+    - java
+    - 💃
+  # My Personal Works
+  works:
+    name:
+      link: http://www.example.com
+      date: 2020
+  # My Personal Projects
+  projects:
+    cofess/gulp-startpro: https://github.com/cofess/gulp-startpro
+    cofess/hexo-theme-pure: https://github.com/cofess/hexo-theme-pure
