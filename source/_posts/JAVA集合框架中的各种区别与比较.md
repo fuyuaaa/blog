@@ -2,7 +2,7 @@
 title: JAVA集合框架中的各种区别与比较
 date: 2019-01-24 21:22:21
 tags: 集合
-categories: JAVA基础
+categories: Java基础
 ---
 ## List Set Map 的区别
 

@@ -29,7 +29,7 @@ site:
     height: 40
     url: ../images/avatar.png
   title: fuyuaaa # 页面title
-  favicon: /favicon.png
+  favicon: ../images/avatar.png
   board: <p>敲代码不如跳舞💃!</p> # 站点公告
   copyright: true # 底部版权信息
 

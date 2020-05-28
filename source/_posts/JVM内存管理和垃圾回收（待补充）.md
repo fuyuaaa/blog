@@ -2,7 +2,7 @@
 title: JVM内存管理和垃圾回收（待补充）
 date: 2019-01-24 23:48:38
 tags: [JVM, GC]
-categories: JAVA基础
+categories: Java基础
 ---
 ## 1、JAVA程序执行过程
 ![avatar](/pics/JAVA程序执行过程.png)
