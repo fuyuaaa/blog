@@ -1,7 +1,7 @@
 ---
 title: Condition等待队列
 date: 2019-02-18 14:22:31
-tags: [并发, AQS]
+tags: [并发]
 categories: 并发
 ---
 #### 简介

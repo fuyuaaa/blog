@@ -3,6 +3,7 @@ title: Java反射
 date: 2019-01-24 21:22:21
 tags: Java基础
 categories: Java基础
+comments: false
 ---
 
 Java反射机制在程序运行时，对于任意一个类，都能知道这个类的所有属性和方法，对于任意一个对象，都能调用它的任意一个方法和属性。这种动态获取信息和动态调用对象方法的功能被称为Java的反射机制。
@@ -10,7 +11,7 @@ Java反射机制在程序运行时，对于任意一个类，都能知道这个�
 ## 获取类信息
 
 ### 获取&操作Class
-```
+```java
 @Test
 public void testGetClass() throws Exception {
     //获取class
@@ -23,7 +24,7 @@ public void testGetClass() throws Exception {
     ReflectTest reflectTest = reflectTestClass.newInstance();
 }
 ```
-```
+```java
 @Test
 public void testOperateClass() throws Exception {
     //获取class
@@ -59,7 +60,7 @@ public void testOperateClass() throws Exception {
 
 ### 获取类属性
 
-```
+```java
 //省略get,set
 private String privateParam;
 public String publicParam;
@@ -79,7 +80,7 @@ public void testGetAndOperateField(){
 ```
 ### 获取 方法&参数
 
-```
+```java
 @Test
 public void testGetAndOperateMethodAndParam() throws Exception {
     //获取class
@@ -113,7 +114,7 @@ public void testGetAndOperateMethodAndParam() throws Exception {
 ## 操作私有方法&修改私有属性
 
 ### 操作私有方法
-```
+```java
 private String testOperatePrivateMethod(String arg1, String arg2) {
     return arg1 + "&" + arg2;
 }
@@ -131,7 +132,7 @@ public void testOperatePrivateMethod() throws Exception {
 ```
 
 ### 修改私有属性
-```
+```java
 private String name = "code";
 
 @Test
@@ -152,7 +153,7 @@ public void testOperatePrivateAttributes() throws Exception {
 ### 修改常量-基本类型
 
 1. 直接初始化-无法修改
-```
+```java
 private final String testFinalOne = "code";
 @Test
 public void testOperateFinalAttributes() throws Exception {
@@ -173,7 +174,7 @@ public void testOperateFinalAttributes() throws Exception {
 ```
 
 2. 构造器初始化-可以修改
-```
+```java
 private final String testFinalTwo;
 
 //构造器初始化
@@ -196,7 +197,7 @@ public void testOperateFinalAttributes() throws Exception {
 ```
 
 3. 三目表达式-可以修改
-```
+```java
 
 //三目表达式
 private final String testFinalThree = null == null ? "code" : "";
