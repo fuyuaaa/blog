@@ -27,9 +27,9 @@ site:
     enabled: true
     width: 40
     height: 40
-    url: ../images/avatar.png
-  title: fuyuaaa # 页面title
-  favicon: ../images/avatar.png
+    url: https://fuyuaaa-bucket.oss-cn-hangzhou.aliyuncs.com/blog_pics/琦玉2.png
+  title: 💃不如跳舞💃 # 页面title
+  favicon: https://fuyuaaa-bucket.oss-cn-hangzhou.aliyuncs.com/blog_pics/琦玉2.png
   board: <p>敲代码不如跳舞💃!</p> # 站点公告
   copyright: true # 底部版权信息
 
@@ -181,13 +181,13 @@ fb_app_id:
 # profile
 profile:
   enabled: true # Whether to show profile bar
-  avatar: images/avatar.png
+  avatar: https://fuyuaaa-bucket.oss-cn-hangzhou.aliyuncs.com/blog_pics/琦玉2.png
   gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
-  author: fuyuaaa
-  author_title: dancer
+  author: 杭州余杭分部跳舞冠军
+  author_title: Dancer
   author_description: 敲代码不如跳舞💃!
-  location: hangzhou, China
-  follow: https://github.com/fuyuaaa
+  location: Hangzhou, China
+  follow: /
   # Social Links
   social:
     links:

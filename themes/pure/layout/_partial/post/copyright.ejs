@@ -3,7 +3,7 @@
     <% if (post.permalink) { %>
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="<%- post.permalink %>" title="<%= post.title %>" target="_blank" rel="external"><%- post.permalink %></a>
+      <a href="<%- post.permalink %>" title="<%= post.title %>" target="_blank" rel="external"><%- decodeURI(post.permalink) %></a>
     </li>
     <% } %>
     <li class="post-copyright-license">
@@ -17,12 +17,12 @@
   <div class="panel-body">
     <figure class="media">
       <div class="media-left">
-        <a href="<%= profile.follow %>" target="_blank" class="img-burn thumb-sm visible-lg">
+        <a href="<%= profile.follow %>" target="_Self" class="img-burn thumb-sm visible-lg">
           <img src="<%= ( profile.gravatar ? gravatar(profile.gravatar, 128) : url_for(profile.avatar)) %>" class="img-rounded w-full" alt="">
         </a>
       </div>
       <div class="media-body">
-        <h3 class="media-heading"><a href="<%= profile.follow %>" target="_blank"><span class="text-dark"><%= profile.author %></span><small class="ml-1x"><%= profile.author_title %></small></a></h3>
+        <h3 class="media-heading"><a href="<%= profile.follow %>" target="_Self"><span class="text-dark"><%= profile.author %></span><small class="ml-1x"><%= profile.author_title %></small></a></h3>
         <div><%= profile.author_description %></div>
       </div>
     </figure>
