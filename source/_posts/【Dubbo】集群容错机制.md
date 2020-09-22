@@ -1,6 +1,6 @@
 ---
-title: 【Dubbo】服务引用机制
-date: 2020-09-14 18:09:00
+title: 【Dubbo】集群容错机制
+date: 2020-09-15 17:31:00
 tags: [dubbo]
 categories: dubbo
 
