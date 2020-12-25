@@ -1,9 +1,3 @@
----
-title: AQS
-date: 2019-02-13 14:22:25
-tags: [并发]
-categories: 并发
----
 # AbstractQueuedSynchronizer
 
 ## 1. 简介
@@ -29,9 +23,9 @@ AQS的使用只需要使用getState、setState、compareAndSetState这三个方�
 ```
 
 
-### 2.1 ReentrantLock使用AQS
+### 2.1 ReenTrantLock使用AQS
 
-接下来，看一下ReentrantLock是如何使用AQS的。可以看到，ReentrantLock使用Sync内部类继承了AQS并重写了tryRelease方法，Sync的子类NonfairSync(非公平)和FairSync(公平)分别重写了tryAcquire方法。
+接下来，看一下ReenTrantLock是如何使用AQS的。可以看到，ReenTrantLock使用Sync内部类继承了AQS并重写了tryRelease方法，Sync的子类NonfairSync(非公平)和FairSync(公平)分别重写了tryAcquire方法。
 
 ```java
 abstract static class Sync extends AbstractQueuedSynchronizer {
@@ -206,7 +200,7 @@ private volatile int state;
 ```
 
 AQS中FIFO队列是有Node类型的head和tail这两个成员变量来实现的，数据结构如下所示。
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/222150/1608878776012-552b43bf-01f5-4976-92cc-9c9d9e718ec0.png#align=left&display=inline&height=281&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1124&originWidth=1686&size=169324&status=done&style=shadow&width=422)
+<img src="https://fuyuaaa-bucket.oss-cn-hangzhou.aliyuncs.com/blog_pics/aqs.png" alt="aqs" style="zoom:25%;" />
 
 
 ### 3.2 独占锁实现
@@ -301,7 +295,7 @@ private Node enq(final Node node) {
 1. 将之前的tail节点的next指向当前节点
 
 如下图所示：
-![aqs-enq.png](https://cdn.nlark.com/yuque/0/2020/png/222150/1608882088030-08ed420b-b8a6-405f-9c33-bd3304c62e6e.png#align=left&display=inline&height=239&margin=%5Bobject%20Object%5D&name=aqs-enq.png&originHeight=954&originWidth=1782&size=196299&status=done&style=none&width=446)
+<img src="https://fuyuaaa-bucket.oss-cn-hangzhou.aliyuncs.com/blog_pics/aqs-enq.png" alt="aqs-enq" style="zoom:25%;" />
 试想一下，如果调换一下执行顺序会咋样：
 
 1. 如果先cas tail节点，再设置prev和next指针，则有可能出现某一时刻，tail节点的的prev和next都为null，队列就不完整了。
@@ -373,7 +367,7 @@ private static boolean shouldParkAfterFailedAcquire(Node pred, Node node) {
 }
 ```
 
-![aqs-acquireQueued.png](https://cdn.nlark.com/yuque/0/2020/png/222150/1608881597452-df218db2-b266-4ceb-90ff-acc2fbbcd396.png#align=left&display=inline&height=318&margin=%5Bobject%20Object%5D&name=aqs-acquireQueued.png&originHeight=1272&originWidth=2511&size=228459&status=done&style=shadow&width=628)
+<img src="https://fuyuaaa-bucket.oss-cn-hangzhou.aliyuncs.com/blog_pics/aqs-acquireQueued.png" alt="aqs-acquireQueued" style="zoom:25%;" />
 
 #### 3.2.4 cancelAcquire方法
 
@@ -459,7 +453,7 @@ unparkSuccessor方法唤醒当前节点的后续节点。如果当前节点的�
 这里为什么要从后往前遍历？
 从3.2.2可知，addWaiter与enq方法中的入队操作并不是一个原子操作。所以可能存在这样一种情况：
 **当前节点是tail节点，但是此刻有新节点入队，并且刚好执行到了3.2.2中描述的第二步(即cas tail完成，此刻当前节点的next指针还是为null)，所以如果从前往后遍历，就可能会漏掉最后这个新入队的节点。**
-![aqs-unparkSuccessor-从后往前.png](https://cdn.nlark.com/yuque/0/2020/png/222150/1608882612104-fa002068-ec08-48e9-9c93-7f042c18451e.png#align=left&display=inline&height=134&margin=%5Bobject%20Object%5D&name=aqs-unparkSuccessor-%E4%BB%8E%E5%90%8E%E5%BE%80%E5%89%8D.png&originHeight=534&originWidth=1098&size=92884&status=done&style=none&width=275)
+<img src="https://fuyuaaa-bucket.oss-cn-hangzhou.aliyuncs.com/blog_pics/aqs-unparkSuccessor-从后往前.png" alt="aqs-unparkSuccessor-从后往前" style="zoom:25%;" />
 
 ```java
 /**
