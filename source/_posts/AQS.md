@@ -1,3 +1,10 @@
+---
+title: AQS
+date: 2019-02-13 14:22:25
+tags: [并发]
+categories: 并发
+---
+
 # AbstractQueuedSynchronizer
 
 ## 1. 简介
@@ -781,6 +788,7 @@ ReentrantReadWriteLock 和 Semaphore 的释放逻辑不一样， ReentrantReadWr
 ## Other
 
 [代码](https://github.com/fuyuaaa/juc-notes/tree/master/src/main/java/top/fuyuaaa/jucnotes/locks)
-参考[](https://www.cnblogs.com/lfls/p/7599863.html)
+参考
 [https://www.cnblogs.com/lfls/p/7599863.html](https://www.cnblogs.com/lfls/p/7599863.html)
-[https://blog.csdn.net/weixin_36586120/article/details/108642253](
+[https://blog.csdn.net/weixin_36586120/article/details/108642253](https://blog.csdn.net/weixin_36586120/article/details/108642253)
+
